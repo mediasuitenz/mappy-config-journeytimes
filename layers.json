@@ -1,0 +1,89 @@
+[
+  {
+    "name": "hmi-routes",
+    "type": "geojson",
+    "enabled": true,
+    "styles": {
+      "layer": {
+        "general": {
+          "stroke": true,
+          "weight": 4,
+          "opacity": 1,
+          "color": "#00ff00"
+        },
+        "properties": {
+          "condition": {
+            "red": {
+              "color": "#ff0000"
+            },
+            "green": {
+              "color": "#00ff00"
+            },
+            "amber": {
+              "color": "#ff5400"
+            },
+            "black": {
+              "color": "#000000"
+            },
+            "unknown": {
+              "color": "#00ff00"
+            }
+          }
+        }
+      }
+    },
+    "dataSource": {
+      "url": "http://tfc.govt.nz/api/hmi_routes.json",
+      "type": "longPoll",
+      "refresh": 10000
+    }
+  },
+  {
+    "name": "hmi-signs",
+    "type": "geojson",
+    "enabled": true,
+    "styles": {
+      "popup": {
+        "css": "vms.css",
+        "template": "vms.html"
+      },
+      "icon": {
+        "general": {
+          "iconUrl": "//www.tfc.govt.nz/images/vms.png",
+          "iconSize": [42, 40],
+          "iconAnchor": [21, 36],
+          "popupAnchor": [0, -40]
+        }
+      }
+    },
+    "dataSource": {
+      "url": "http://tfc.govt.nz/api/hmi_signs.json",
+      "type": "longPoll",
+      "refresh": 10000
+    }
+  },
+  {
+    "name": "hmi-signs-beca",
+    "type": "geojson",
+    "enabled": true,
+    "styles": {
+      "popup": {
+        "css": "vms-beca.css",
+        "template": "vms-beca.html"
+      },
+      "icon": {
+        "general": {
+          "iconUrl": "//www.tfc.govt.nz/images/vms.png",
+          "iconSize": [42, 40],
+          "iconAnchor": [21, 36],
+          "popupAnchor": [0, -40]
+        }
+      }
+    },
+    "dataSource": {
+      "url": "http://localhost:12345/hmi-beca.json",
+      "type": "longPoll",
+      "refresh": 10000
+    }
+  }
+]
