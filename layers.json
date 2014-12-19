@@ -61,29 +61,5 @@
       "type": "longPoll",
       "refresh": 10000
     }
-  },
-  {
-    "name": "hmi-signs-beca",
-    "type": "geojson",
-    "enabled": true,
-    "styles": {
-      "popup": {
-        "css": "vms-beca.css",
-        "template": "vms-beca.html"
-      },
-      "icon": {
-        "general": {
-          "iconUrl": "//www.tfc.govt.nz/images/vms.png",
-          "iconSize": [42, 40],
-          "iconAnchor": [21, 36],
-          "popupAnchor": [0, -40]
-        }
-      }
-    },
-    "dataSource": {
-      "url": "http://localhost:12345/hmi-beca.json",
-      "type": "longPoll",
-      "refresh": 10000
-    }
   }
 ]
